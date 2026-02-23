@@ -12,28 +12,35 @@ struct MainTabView: View {
         TabView {
             
             ContentView()
-            
                 .tabItem {
                     Label {
                         Text("Home")
                     } icon: {
                         Image(systemName: "house")
                     }
+                }
                     
             NotesView()
-                        .tabItem {
-                            Label {
-                                Text("Notes")
-                            } icon : {
-                                Image(systemName: "list.bullet.clipboard.fill")
-                            }
-                        }
-                    
-                    
+                .tabItem {
+                    Label {
+                        Text("Notes")
+                        } icon : {
+                        Image(systemName: "list.bullet.clipboard.fill")
+                    }
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Label {
+                        Text("Settings")
+                    } icon: {
+                        Image(systemName: "gear")
+                    }
+                }
             }
         }
     }
-}
+
 
 
 #Preview {
