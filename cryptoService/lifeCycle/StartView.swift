@@ -9,7 +9,17 @@ import SwiftUI
 
 struct StartView: View {
     var body: some View {
-        Text("dede")
+        VStack {
+            
+            Image(systemName: "dollarsign.gauge.chart.leftthird.topthird.rightthird")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(.yellow)
+            
+            Text("Crypto Service")
+                .font(.title)
+                .bold()
+        }
     }
 }
 

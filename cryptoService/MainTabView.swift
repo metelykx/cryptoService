@@ -11,6 +11,7 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             
+            ///главна страница 
             ContentView()
                 .tabItem {
                     Label {
@@ -19,7 +20,7 @@ struct MainTabView: View {
                         Image(systemName: "house")
                     }
                 }
-                    
+            ///для заметок
             NotesView()
                 .tabItem {
                     Label {
@@ -28,7 +29,7 @@ struct MainTabView: View {
                         Image(systemName: "list.bullet.clipboard.fill")
                     }
                 }
-            
+            ///для настройки
             SettingsView()
                 .tabItem {
                     Label {
