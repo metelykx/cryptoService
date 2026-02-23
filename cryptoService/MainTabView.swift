@@ -19,7 +19,16 @@ struct MainTabView: View {
                     } icon: {
                         Image(systemName: "house")
                     }
-
+                    
+            NotesView()
+                        .tabItem {
+                            Label {
+                                Text("Notes")
+                            } icon : {
+                                Image(systemName: "list.bullet.clipboard.fill")
+                            }
+                        }
+                    
                     
             }
         }
