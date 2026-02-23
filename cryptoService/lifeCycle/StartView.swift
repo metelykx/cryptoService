@@ -14,18 +14,23 @@ struct StartView: View {
             Color("backgroundColor", bundle: nil)
                 .ignoresSafeArea()
 
+           
             VStack {
-                Image(systemName: "dollarsign.gauge.chart.leftthird.topthird.rightthird")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: 150, maxHeight: 150)
+                Spacer()
+                VStack {
+                    Image(systemName: "dollarsign.gauge.chart.leftthird.topthird.rightthird")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: 150, maxHeight: 150)
 
-                Text("Crypto Service")
-                    .foregroundStyle(.white)
-                    .font(.custom("Fredoka-Bold", size: 40))
-                    .padding(.top, 10)
-            }
+                    Text("Crypto Service")
+                        .foregroundStyle(.white)
+                        .font(.custom("Fredoka-Bold", size: 40))
+                        .padding(.top, 10)
+                }
+                Spacer()
+            }.padding(.bottom, 120)
         }
     }
 }
