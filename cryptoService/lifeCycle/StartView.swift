@@ -9,20 +9,26 @@ import SwiftUI
 
 struct StartView: View {
     var body: some View {
-        VStack {
-            
-            Image(systemName: "dollarsign.gauge.chart.leftthird.topthird.rightthird")
-                .resizable()
-                .scaledToFit()
-                .foregroundStyle(.yellow)
-            
-            Text("Crypto Service")
-                .font(.title)
-                .bold()
+        ZStack {
+            // Фон на весь экран
+            Color("backgroundColor", bundle: nil)
+                .ignoresSafeArea()
+
+            VStack {
+                Image(systemName: "dollarsign.gauge.chart.leftthird.topthird.rightthird")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: 150, maxHeight: 150)
+
+                Text("Crypto Service")
+                    .foregroundStyle(.white)
+                    .font(.custom("Fredoka-Bold", size: 40))
+                    .padding(.top, 10)
+            }
         }
     }
 }
-
 
 #Preview {
     StartView()
